@@ -23,6 +23,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // agregamos una sombra a la celda
+        self.backgroundColor = [UIColor greenColor];
         self.layer.shadowColor = [UIColor blackColor].CGColor;
         self.layer.shadowRadius = 3.0f;
         self.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);

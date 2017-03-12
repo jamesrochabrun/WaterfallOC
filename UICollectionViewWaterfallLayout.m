@@ -58,15 +58,6 @@
     return self;
 }
 
-#pragma mark - Life cycle
-- (void)dealloc {
-    
-    [_columnHeights removeAllObjects];
-    _columnHeights = nil;
-    
-    [_itemAttributes removeAllObjects];
-    _itemAttributes = nil;
-}
 
 #pragma mark - Methods to Override
 - (void)prepareLayout {
@@ -168,6 +159,17 @@
     }];
     
     return index;
+}
+
+
+#pragma mark - Life cycle
+- (void)dealloc {
+    
+    [_columnHeights removeAllObjects];
+    _columnHeights = nil;
+    
+    [_itemAttributes removeAllObjects];
+    _itemAttributes = nil;
 }
 
 

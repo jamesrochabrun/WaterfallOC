@@ -23,8 +23,7 @@
     _window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
     [_window makeKeyAndVisible];
 //    WaterfallCVVC *vc = [[WaterfallCVVC alloc] initWithCollectionViewLayout:[UICollectionViewWaterfallLayout new]];
-    WaterfallCVVC *vc = [[WaterfallCVVC alloc] initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
-
+    WaterfallCVVC *vc = [WaterfallCVVC new];
     _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     
     return YES;

@@ -47,7 +47,6 @@
     NSLog(@" y = %f", y);
     NSLog(@"self.imagesize: %f" , self.imageSizeH);
 
-    
 
    // self.thumbnailData = img;
 }

@@ -12,6 +12,7 @@
 #import "UICollectionViewWaterfallCell.h"
 
 @interface WaterfallCVVC ()
+@property (nonatomic, strong) UICollectionView *waterFallCV;
 
 @end
 
@@ -21,22 +22,29 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor redColor];
+    self.waterFallCV.backgroundColor = [UIColor yellowColor];
     
-    self.collection = [NSMutableArray new];
-    
+    UICollectionViewWaterfallLayout *layout = [UICollectionViewWaterfallLayout new];
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    NSLog(@"%@", self.collectionView.collectionViewLayout);
-    UICollectionViewWaterfallLayout *layout = [[UICollectionViewWaterfallLayout alloc] init];
-    [self.collectionView setCollectionViewLayout:layout];
     layout.delegate = self;
     layout.columnCount = 2;
     layout.itemWidth = self.view.frame.size.width / 2 ;
     //layout.sectionInset = UIEdgeInsetsMake(4, 4, 4, 4);
 
-    [self.collectionView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    [self.collectionView registerClass:[UICollectionViewWaterfallCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    
+    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    // _waterFallCollectionView = [_waterFallCollectionView initWithFrame:frame];
+    _waterFallCV = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout: layout];
+    [_waterFallCV registerClass:[UICollectionViewWaterfallCell self] forCellWithReuseIdentifier:@"Cell"];
+    
+    self.collection = [NSMutableArray new];
+    self.waterFallCV.dataSource = self;
+
+    [self.waterFallCV setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+    [self.waterFallCV registerClass:[UICollectionViewWaterfallCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.view addSubview:_waterFallCV];
     
     // Do any additional setup after loading the view.
     [self loadDummyData];
