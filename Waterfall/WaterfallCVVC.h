@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "UICollectionViewWaterfallLayout.h"
 
-@interface WaterfallCVVC : UIViewController <UICollectionViewDelegateWaterfallLayout, UICollectionViewDataSource>
-@property (strong, nonatomic) NSMutableArray *collection;
+@interface WaterfallCVVC : UIViewController <UICollectionViewDelegateWaterfallLayout>
 
 @end

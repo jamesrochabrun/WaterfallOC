@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B031E4D1E75D73100FD13E5 /* WaterFallDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B031E4C1E75D73100FD13E5 /* WaterFallDataSource.m */; };
 		7B69B31D1E4ABA3D00E46C97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69B31C1E4ABA3D00E46C97 /* main.m */; };
 		7B69B3201E4ABA3D00E46C97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69B31F1E4ABA3D00E46C97 /* AppDelegate.m */; };
 		7B69B3281E4ABA3D00E46C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B69B3271E4ABA3D00E46C97 /* Assets.xcassets */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B031E4B1E75D73100FD13E5 /* WaterFallDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFallDataSource.h; sourceTree = "<group>"; };
+		7B031E4C1E75D73100FD13E5 /* WaterFallDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFallDataSource.m; sourceTree = "<group>"; };
 		7B69B3181E4ABA3D00E46C97 /* Waterfall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waterfall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B69B31C1E4ABA3D00E46C97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B69B31E1E4ABA3D00E46C97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Waterfall/AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 			children = (
 				7B69B3381E4ABC9400E46C97 /* ImageDetail.h */,
 				7B69B3391E4ABC9400E46C97 /* ImageDetail.m */,
+				7B031E4B1E75D73100FD13E5 /* WaterFallDataSource.h */,
+				7B031E4C1E75D73100FD13E5 /* WaterFallDataSource.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				7B69B33A1E4ABC9400E46C97 /* ImageDetail.m in Sources */,
 				7B69B31D1E4ABA3D00E46C97 /* main.m in Sources */,
 				7B69B3341E4ABA6500E46C97 /* UICollectionViewWaterfallLayout.m in Sources */,
+				7B031E4D1E75D73100FD13E5 /* WaterFallDataSource.m in Sources */,
 				7B69B3371E4ABBC100E46C97 /* UICollectionViewWaterfallCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +354,7 @@
 				7B69B3311E4ABA3D00E46C97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
